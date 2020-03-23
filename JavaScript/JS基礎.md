@@ -51,3 +51,19 @@ console.log(10 ** 3); //累乗
 console.log(2 + 10 *3); 
 console.log((2 + 10) *3); 
 ```
+
+## 定数
+
+```js:main.js
+const price = 150; 
+
+console.log(price * 140); 
+console.log(price * 180); 
+```
+__const__ で定数を定義する
+
+
+
+
+
+
