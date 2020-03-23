@@ -63,6 +63,64 @@ console.log(price * 180);
 __const__ で定数を定義する
 
 
+## 変数
+constで与えられた値は再代入できないので、
+```js:main.js
+let price = 150; 
+
+console.log(price * 140); 
+console.log(price * 180); 
+
+price = 200; 
+
+console.log(price * 140); 
+console.log(price * 180); 
+```
+変数letやvarで定義する
+
+### 変数定数の命名規則
+* 英数字、$、_のみで数字からはじめられない
+* 大文字、小文字は区別される
+* 予約後は使えない
+
+
+## 変数を使った計算
+```js:main.js
+let price = 500;
+
+// price = price + 100;
+price += 100; 
+
+
+// price = price * 2; 
+price *= 2; 
+
+// price = price + 1; 
+// price += 1; 
+price ++; 
+
+// price -= 1; 
+price --; 
+
+console.log(price); 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
