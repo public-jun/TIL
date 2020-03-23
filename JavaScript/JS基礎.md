@@ -106,9 +106,16 @@ console.log(price);
 ```
 
 ## データ型について
+
 |データ型|例|
 |--:|:--|
-|文字列
+|文字列(string)|'hello' '世界'|
+|数値(number)|5 4.3 -20|
+|Undefined|undefined|
+|Null|null|
+|真偽値(Boolean)|true false|
+|オブジェクト(Object)|{a:3, b:5}|
+
 
 
 
