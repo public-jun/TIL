@@ -136,8 +136,36 @@ console.log(typeof null);
 >object
 
 
+## 数字の文字列を使う
+```js:main.js
+console.log('5' * 3); 
+console.log('5' - 3); 
+```
+>15
 
+>2
+数字からなる文字列も数値に変換して計算される
 
+ただし
+```js:main.js
+console.log('5' + 3); 
+```
+>53
+文字列と数値の間に+演算子を使うと、文字列の連結として扱われる
+
+なので
+```js:main.js
+console.log(parseInt('5', 10) + 3); 
+```
+>8
+
+`parseInt('5', 10)`これは文字列の5を整数値の10進数の5として扱う.
+
+```js:main.js
+console.log(parseInt('hello', 10)); 
+```
+>NaN
+`parseInt('hello', 10)`で数値にしようとしたができないので`Not a Number`とでる
 
 
 
