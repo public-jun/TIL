@@ -13,6 +13,30 @@ HTMLファイルの中の<body></body>にいれる
 console.log('Hello World from main js!'); 
 ```
 
+## 文字列の表示の仕方
+
+```js:main.js
+console.log('hello'); 
+console.log("hello");
+```
+文字列は''(シングルクォーテーション)もしくは""(ダブルクォーテーション)で囲む
+
+```js:main.js
+console.log("it's me!"); 
+console.log('it\'s me!'); 
+```
+文字列の中で'を使う場合は”で囲むか、直前に\(バックスラッシュ)をいれる
+
+```js:main.js
+console.log('hell\no wo\trld'); 
+```
+\nで改行、\tでタブ
+
+```js:main.js
+console.log('hello' + 'world'); 
+```
++記号で文字列を連結する
+
 
 ## 四則演算
 
