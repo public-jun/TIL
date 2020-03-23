@@ -116,6 +116,24 @@ console.log(price);
 |真偽値(Boolean)|true false|
 |オブジェクト(Object)|{a:3, b:5}|
 
+`typeof`演算子を使うことで型がわかる
+
+```javascript:main.js
+console.log(typeof 'hello'); 
+console.log(typeof 5); 
+console.log(typeof true); 
+console.log(typeof undefined); 
+console.log(typeof null); 
+```
+>string
+
+>number
+
+>boolean
+
+>undefined
+
+>object
 
 
 
