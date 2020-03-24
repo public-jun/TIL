@@ -197,6 +197,7 @@ console.log(Boolean('hello'));
 
 `Boolean()`で中身を評価することがでる
 
+
 ## if文で条件分岐
 
 ```js:main.js
@@ -225,6 +226,7 @@ if (score >= 80) {
 ```
 >OK...
 
+
 ## 条件演算子
 if else 文の省略式
 ```js:main.js
@@ -239,6 +241,7 @@ score >= 80 ? console.log('Great!') : console.log('OK...')
 > Great!
 
 コードが読みにくくなる場合があるので、注意が必要
+
 
 ## 論理演算子
 ```js:main.js
@@ -263,3 +266,40 @@ if (score >= 50 && name === 'sato') {
 * && なおかつ(and)
 * || もしくは(or)
 * !  ~ではない(not)
+
+
+## switch文で条件分岐
+```js:main.js
+const signal = 'green'; 
+
+if (signal === 'red') {
+  console.log('stop'); 
+}
+else if (signal === 'yellow') {
+  console.log('Caution'); 
+}
+else if (signal === 'blue') {
+  console.log('Go'); 
+}
+```
+このようにif文で条件式が`(a === b)`のような場合は __switch文__ で書くことができる
+
+```js:main.js
+const signal = 'green'; 
+
+switch (signal) {
+  case 'red': 
+    console.log('Stop'); 
+    break; 
+  case 'yellow': 
+    console.log('Caution'); 
+    break; 
+  case 'blue': 
+  case 'green': 
+    console.log('Go'); 
+    break; 
+  default: 
+    console.log('Wrong signal'); 
+    break; 
+}
+```
