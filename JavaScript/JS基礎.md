@@ -196,3 +196,36 @@ console.log(Boolean('hello'));
 >true
 
 `Boolean()`で中身を評価することがでる
+
+## if文で条件分岐
+
+```js:main.js
+if(条件式) {
+  true時の処理
+} 
+else if (条件式) {
+ if　がfalse　でelse if がtrueの処理
+} 
+else {
+ それ以外の式
+ }
+```
+
+例
+```js:main.js
+const score = 40; 
+
+if (score >= 80) {
+  console.log('Great!'); 
+} else if (score >= 60) {
+  console.log('Good!'); 
+} else {
+  console.log('OK...'); 
+}
+```
+>OK...
+
+
+
+
+
