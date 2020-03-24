@@ -239,3 +239,27 @@ score >= 80 ? console.log('Great!') : console.log('OK...')
 > Great!
 
 コードが読みにくくなる場合があるので、注意が必要
+
+## 論理演算子
+```js:main.js
+const score = 60; 
+const name = 'sato'; 
+
+if (score >= 50) {
+  if (name === 'sato') {
+  console.log('Good job!'); 
+  }
+}
+```
+このようにif文を重ねることができるが、
+
+```js:main.js
+if (score >= 50 && name === 'sato') {
+  console.log('Good job!'); 
+}
+```
+論理演算子を用いる方が整っている
+
+* && なおかつ(and)
+* || もしくは(or)
+* !  ~ではない(not)
