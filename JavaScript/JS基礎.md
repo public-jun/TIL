@@ -152,6 +152,7 @@ console.log('5' - 3);
 console.log('5' + 3); 
 ```
 >53
+
 文字列と数値の間に+演算子を使うと、文字列の連結として扱われる
 
 なので
@@ -166,8 +167,35 @@ console.log(parseInt('5', 10) + 3);
 console.log(parseInt('hello', 10)); 
 ```
 >NaN
+
 `parseInt('hello', 10)`で数値にしようとしたができないので`Not a Number`とでる
 
+
+## 比較演算子
+
+```js:main.js
+const price = 1200; 
+
+console.log(price > 1000);  //true
+console.log(price < 1000);  //false
+console.log(price >= 1000); //true
+console.log(price <= 1000); //false
+console.log(price === 1000);//false
+console.log(price !== 1000);//true
+```
+
+false <- 0, null, undefined, '', false
+true  <- それ以外
+
+```js:main.js
+console.log(Boolean(0)); 
+console.log(Boolean('hello')); 
+```
+>false
+
+>true
+
+`Boolean()`で中身を評価することができる
 
 
 
