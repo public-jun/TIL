@@ -230,3 +230,12 @@ if else 文の省略式
 ```js:main.js
 条件式 ? true時の処理 : false時の処理
 ```
+例
+```js:main.js
+const score = 85; 
+
+score >= 80 ? console.log('Great!') : console.log('OK...')
+```
+> Great!
+
+コードが読みにくくなる場合があるので、注意が必要
