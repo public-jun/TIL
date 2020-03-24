@@ -224,3 +224,9 @@ if (score >= 80) {
 }
 ```
 >OK...
+
+## 条件演算子
+if else 文の省略式
+```js:main.js
+条件式 ? true時の処理 : false時の処理
+```
