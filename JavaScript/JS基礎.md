@@ -323,3 +323,13 @@ for (let i=1; i <= 10; i++) {
 }
 ```
 
+
+## while文
+```js:main.js
+let hp = 100; 
+
+while (hp > 0) {
+  console.log(`${hp} HP left!`); 
+  hp -= 15; 
+}
+```
