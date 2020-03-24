@@ -195,18 +195,4 @@ console.log(Boolean('hello'));
 
 >true
 
-`Boolean()`で中身を評価することができる
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+`Boolean()`で中身を評価することがでる
