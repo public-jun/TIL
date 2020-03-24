@@ -316,3 +316,10 @@ for (let i=1; i <= 10; i++) {
 `console.log('hello' + i)`は __テンプレートリテラル__ を用いて`console.log(`hello ${i}`)`と表すこともできる。
 
 `${a}`で文字列として扱う
+
+```js:main.js
+for (let i=1; i <= 10; i++) {
+ console.log(`hello ${i}`);
+}
+```
+
