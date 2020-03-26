@@ -347,3 +347,34 @@ do {
 ```
 
 条件式を満たさなくても、最初の一度は実行される。
+
+## ccontinue, break文
+```js:main.js 
+for (let i = 1; i <= 10; i++) {
+  if (i === 4) {
+  continue; 
+  }
+  console.log(i)
+}
+```
+`continue`で指定された処理を飛ばす。
+
+ちなみに
+```js:main.js
+if (i % 3 === 0) {
+    continue; 
+  }
+```
+これで3の倍数時飛ばす。
+
+```js:main.js
+for (let i = 1; i <= 10; i++) {
+ if (i === 4) {
+    break; 
+  }
+  console.log(i)
+}
+```
+`break`は指定された処理までで強制的に終了させる。
+
+
