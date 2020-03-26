@@ -378,3 +378,20 @@ for (let i = 1; i <= 10; i++) {
 `break`は指定された処理までで強制的に終了させる。
 
 
+## 関数で処理をまとめる
+```js:main.js
+function showAd() {
+  console.log('--------------'); 
+  console.log('------ Ad ----'); 
+  console.log('--------------'); 
+}
+
+showAd(); 
+console.log('Tom is great!'); 
+console.log('Bob is great!'); 
+showAd(); 
+console.log('Steave is great!'); 
+console.log('Richard is great!'); 
+showAd(); 
+```
+`function showAd()`で処理を
