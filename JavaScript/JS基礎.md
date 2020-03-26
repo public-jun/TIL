@@ -394,4 +394,27 @@ console.log('Steave is great!');
 console.log('Richard is great!'); 
 showAd(); 
 ```
-`function showAd()`で処理を
+`function showAd()`で処理をまとめる。そして、`showAd()`で関数を呼び出す。
+
+
+## 引数
+関数に値を渡してそれを使いたい時
+```js:main.js
+function showAd(message) {　　//仮引数
+  console.log('--------------'); 
+  console.log(`--- ${message}---`); 
+  console.log('--------------'); 
+}
+
+showAd('Header Ad'); //実引数
+console.log('Tom is great!'); 
+console.log('Bob is great!'); 
+showAd('Ad'); 
+console.log('Steave is great!'); 
+console.log('Richard is great!'); 
+showAd('Footer Ad'); 
+```
+
+
+
+
