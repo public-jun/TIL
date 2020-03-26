@@ -333,3 +333,17 @@ while (hp > 0) {
   hp -= 15; 
 }
 ```
+
+変数が条件を満たす間、繰り返される。
+
+## do while文
+```js:main.js
+let hp = -50; 
+
+do {
+  console.log(`${hp} HP left!`); 
+  hp -= 15; 
+} while (hp > 0);
+```
+
+条件式を
