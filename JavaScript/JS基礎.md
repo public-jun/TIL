@@ -414,6 +414,13 @@ console.log('Steave is great!');
 console.log('Richard is great!'); 
 showAd('Footer Ad'); 
 ```
+関数を呼び出す時に()で渡される値を __実引数__ 、定義内で仮に置かれる引数を __仮引数__ 
+
+```js:main.js
+function showAd(message = 'Ad')
+showAd(); 
+```
+引数が渡されなかった時のデフォルトの値を決めることもできる。
 
 
 
