@@ -423,5 +423,17 @@ showAd();
 引数が渡されなかった時のデフォルトの値を決めることもできる。
 
 
+## returnによる返り値
+```js:main.js
+function sum (a, b, c) {
+  return a + b + c;
+}
+
+const total = sum (1, 2, 3) + sum (4, 5, 6);
+
+console.log(total); 
+```
+
+`return`とすることで値を呼び出し元に返すことができる
 
 
