@@ -501,6 +501,7 @@ const double = a => a * 2;
 console.log(double(12)); 
 ```
 >21
+
 >24
 
 ブロックの中がreturnを返すだけであればreturnの値だけ書けば良い。また引数がひとつの場合は()も省略できる
