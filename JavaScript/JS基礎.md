@@ -435,3 +435,45 @@ console.log(total);
 ```
 
 `return`とすることで値を呼び出し元に返すことができる
+
+
+## 関数式
+
+### 関数宣言
+```js:main.js
+function 関数名(仮引数, 仮引数,,,) {
+  処理; 
+  処理; 
+  return 返り値;
+}
+
+関数名(実引数, 実引数,,,);
+```
+
+### 関数式
+```js:main,js
+const  定数名 = function(仮引数, 仮引数,,,) {
+  処理; 
+  処理;
+  return 返り値; 
+}; 
+
+定数名(実引数, 実引数,,,); 
+```
+`function(){};`ブロックの最後を __;__ (セミコロン)で閉じる。
+またfunction関数は『無名関数』と呼ばれる。
+
+例
+```js:main.js
+// function sum(a, b, c) {
+//   return a + b + c;
+// }
+
+const sum = function(a, b, c) {  //関数式
+  return a + b + c;
+};
+
+const total = sum(1, 2, 3) + sum(4, 5, 6); 
+console.log(total); 
+```
+>21
