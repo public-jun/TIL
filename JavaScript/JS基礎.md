@@ -477,3 +477,30 @@ const total = sum(1, 2, 3) + sum(4, 5, 6);
 console.log(total); 
 ```
 >21
+
+
+## アロー関数
+関数式を省略した形でかける
+
+```js:main.js
+// const sum = function(a, b, c) {
+//   return a + b + c;
+// };
+
+const sum = (a, b, c) => a + b + c;
+
+const total = sum(1, 2, 3) + sum(4, 5, 6); 
+console.log(total); 
+
+// const double = function(a) {
+//   return a * 2; 
+// }; 
+
+const double = a => a * 2; 
+
+console.log(double(12)); 
+```
+>21
+>24
+
+ブロックの中がreturnを返すだけであればreturnの値だけ書けば良い。また引数がひとつの場合は()も省略できる
