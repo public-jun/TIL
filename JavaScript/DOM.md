@@ -145,3 +145,53 @@ classはJSでは予約語になるので、クラス属性を扱う場合は`cla
 `className`はこの要素に他のクラスがすでについていれば注意が必要(上記では`my-border`がついている)
 元からついているものもまとめて、書く必要がある。
 `className`は元からついていたクラスも考慮しなければならない。
+
+
+## classList
+class属性の操作は __classList__ を使うと便利
+
+### クラスの追加
+```js:main.js
+const targetNode = document.getElementById('target');
+
+    // targetNode.className = 'my-color my-border';
+    targetNode.classList.add('my-color');
+```
+`classList.add`で既存のクラス設定に`my-color`を追加してくれる。
+
+### 要素に特定のクラスがついているか調べる
+```js:main.js
+targetNode.classList.contains('my-color')
+```
+これで特定のクラスがついているか、trueかfalseで返してくれる
+
+### クラスの追加と外す
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const targetNode = document.getElementById('target');
+    
+    if (targetNode.classList.contains('my-color') === true ) {   //trueかfalseでしらべる
+      targetNode.classList.remove('my-color'); 
+    } else {
+      targetNode.classList.add('my-color'); 
+    }
+  });
+}
+```
+クリックするごとにクラスをつけたり外したりする
+
+また、以下でも同じ意味になる
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const targetNode = document.getElementById('target');
+
+    // if (targetNode.classList.contains('my-color') === true ) {
+    //   targetNode.classList.remove('my-color'); 
+    // } else {
+    //   targetNode.classList.add('my-color'); 
+    // }
+    targetNode.classList.toggle('my-color');   //上と同じ
+  });
+```
