@@ -101,3 +101,47 @@ addEventLisetner('イベントの種類の文字列', 実行したい処理の�
 }
 ```
 JavaScriptでは`backgroundColor`と表す。
+
+
+## className 
+classはJSでは予約語になるので、クラス属性を扱う場合は`className`を使う
+```HTML:index.html
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Basics</title>
+  <style>
+    .my-color{
+      color: red; 
+      background-color: skyblue;
+    }
+
+    .my-border {
+      border-bottom: 4px solid orange; 
+    }
+
+  </style>
+</head>
+<body>
+  <button>Run</button>
+
+  <h1 id="target" class="my-border">プログラミング学習</h1>
+  <p>こんにちは。こんにちは。こんにちは。</p>
+  <p>こんにちは。こんにちは。こんにちは。</p>
+  <p>こんにちは。こんにちは。こんにちは。</p>
+
+  <script src="js/main.js"></script>
+</body>
+```
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const targetNode = document.getElementById('target');
+
+    // targetNode.className = 'my-color';
+    targetNode.className = 'my-color my-border';
+  });
+}
+```
+`className`はこの要素に他のクラスがすでについていれば注意が必要(上記では`my-border`がついている)
+元からついているものもまとめて、書く必要がある。
+`className`は元からついていたクラスも考慮しなければならない。
