@@ -66,3 +66,23 @@ idで指定する場合は、`getElementById()`というメソッドを使う。
  ### 要素を取得する方法
  * idやセレクターを指定して要素を取得する
  * DOMツリーの階層関係から要素を取得する
+
+
+## addEventListener() 
+よりインタラクティブにする
+```js:main.js
+addEventLisetner('イベントの種類の文字列', 実行したい処理の関数)
+```
+
+例
+```HTML:index.html
+<button>Run</button>
+```
+```js:main.js
+{
+  document.querySelector('button').addEventListener('click', () => {
+    document.getElementById('target').textContent = 'Change!'; 
+  }); 
+}
+```
+ 
