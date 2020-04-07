@@ -86,3 +86,18 @@ addEventLisetner('イベントの種類の文字列', 実行したい処理の�
 }
 ```
  
+
+## 要素の属性を操作
+```js:main.js
+{
+  document.querySelector('button').addEventListener('click', () => {
+    const targetNode = document.getElementById('target');
+
+    targetNode.textContent = 'Change!';       
+    targetNode.title = 'This is title!';     //document.getElementById('target').title
+    targetNode.style.color = 'red'; 
+    targetNode.style.backgroundColor = 'skyblue'; //cssで-(ハイフン)を使うようなものは大文字にする
+  }); 
+}
+```
+JavaScriptでは`backgroundColor`と表す。
