@@ -59,3 +59,10 @@ idで指定する場合は、`getElementById()`というメソッドを使う。
  
  * __id属性がついていたら、`getElementById()`__
  * __id属性がついていなかったら、`querySelector()`もしくは、`querySelectorAll()`__
+ 
+ 
+ ## 要素の取得
+ 
+ ### 要素を取得する方法
+ * idやセレクターを指定して要素を取得する
+ * DOMツリーの階層関係から要素を取得する
