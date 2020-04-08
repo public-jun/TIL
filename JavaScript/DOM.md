@@ -207,3 +207,32 @@ JavaScriptからカスタムデータ属性の値にアクセスする場合は,
 targetNode.textContent = targetNode.dataset.transration;　　//dataset.transration
 ```
 `detaset`と書いてアクセスする
+
+
+## 要素の追加
+1. 要素を作る
+1. 中身のテキストを作る
+1. DOMツリーに追加する
+
+```HTML:index.html
+
+  <ul>
+    <li>item 0</li>
+    <li>item 1</li>
+    //ここにli要素を追加したい
+  </ul>
+```
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const item2 = document.createElement('li');   //li要素を作成
+    item2.textContent = 'item 2';                 //中身のテキストを作成
+
+    // const ulNode = document.querySelector('ul');  //ul要素を取得
+    const ul = document.querySelector('ul');         //左は定数名、右は文字列であることを区別
+    ul.appendChild(item2);                           //item2をDOMツリーに追加
+  });
+}
+```
+`createElement()`で要素を作成
+`appendChild()`でDOMツリーに追加
