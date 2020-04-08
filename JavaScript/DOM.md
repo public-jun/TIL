@@ -255,3 +255,28 @@ targetNode.textContent = targetNode.dataset.transration;　　//dataset.transrat
 ```
 `cloneNode()`でコピーする
 `insertBefore(挿入するもの, 挿入するものの直後)`
+
+
+## 要素の削除
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const item1 = document.querySelectorAll('li')[1]; 
+
+    item1.remove(); 
+  });
+}
+```
+これは、古いブラウザでは適用されないことがあるので
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const item1 = document.querySelectorAll('li')[1]; 
+
+    // item1.remove(); 
+    //親Node.removeChild(削除するNode); 
+    document.querySelector('ul').removeChild(item1); 
+  });
+}
+```
+`親Node.removeChild(削除するNode);`で表す
