@@ -195,3 +195,15 @@ targetNode.classList.contains('my-color')
     targetNode.classList.toggle('my-color');   //上と同じ
   });
 ```
+
+
+## カスタムデータ属性
+HTMLでは`data-`から始まっていれば独自の属性をつけることができる
+```HTML:index.html
+<h1 id="target" data-transration="Dotinstall">ドットインストール</h1>
+```
+JavaScriptからカスタムデータ属性の値にアクセスする場合は,,,
+```js:main.js
+targetNode.textContent = targetNode.dataset.transration;　　//dataset.transration
+```
+`detaset`と書いてアクセスする
