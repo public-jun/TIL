@@ -236,3 +236,22 @@ targetNode.textContent = targetNode.dataset.transration;　　//dataset.transrat
 ```
 `createElement()`で要素を作成
 `appendChild()`でDOMツリーに追加
+
+
+## 要素の複製と、挿入
+1. 要素を複製して
+1. DOMツリーに追加
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const item0 = document.querySelectorAll('li')[0]; //li[0]要素を取得して、複製する
+    const copy = item0.cloneNode(true);               //trueで中身のテキストもコピー、falseは中身コピーしない
+
+    const ul = document.querySelector('ul');         //ul要素の取得
+    const item2 = document.querySelectorAll('li')[2]; //li[2]要素を取得
+    ul.insertBefore(copy, item2);                     //copyをitem2の前に挿入する
+  });
+}
+```
+`cloneNode()`でコピーする
+`insertBefore(挿入するもの, 挿入するものの直後)`
