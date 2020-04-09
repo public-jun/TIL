@@ -413,3 +413,19 @@ click以外の様々なイベント
   });
 }
 ```
+
+
+## イベントオブジェクトを扱う
+関数に引数を渡せば、ブラウザがイベントに関する情報をセットして渡してくれる
+```js:main.js
+{ 
+  document.addEventListener('mousemove', e => {  //引数にeを渡す
+    // console.log('moved!'); 
+    console.log(e.clientX, e.clientY);         //マウスのブラウザ内での座標を表示する
+  });
+
+  document.addEventListener('keydown', e => {  //キー入力時に処理
+    console.log(e.key);                        //入力されたキーを表示
+  });
+}
+```
