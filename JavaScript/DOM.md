@@ -359,3 +359,42 @@ targetNode.textContent = targetNode.dataset.transration;　　//dataset.transrat
   });
 }
 ```
+
+
+## チェックボックスを操作
+チェックボックスで選択された値を使って要素を作成、DOMツリーに追加
+```HTML:index.html
+<body>
+  <input type="checkbox" name="color" value="red">赤
+  <input type="checkbox" name="color" value="blue">青
+  <input type="checkbox" name="color" value="yellow">黄
+  <button>Add</button>
+
+  <ul>
+  </ul>
+  
+  <script src="js/main.js"></script>
+</body>
+```
+```js:main.js
+'use strict';
+
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const colors = document.querySelectorAll('input'); 
+    const selectedColors = [];          //配列の中身は変わるが、再代入はないのでconstで宣言
+
+    colors.forEach(color => {           //colorsのinputそれぞれに対して
+      if (color.checked === true) {     //チェックがあれば
+        selectedColors.push(color.value);  //配列にvalueの値を代入する
+      }
+    });
+
+    const li = document.createElement('li');   //li要素を作る
+    // li.textContent = selectedColors.join(','); //liのテキストを配列を区切って代入する
+    li.textContent = selectedColors; //liのテキストを配列を区切って代入する
+    document.querySelector('ul').appendChild(li); //ulにliをappendChildする
+  }); 
+}
+```
+`li.textContent = selectedColors.join(',');`は`li.textContent = selectedColors;`でも可能
