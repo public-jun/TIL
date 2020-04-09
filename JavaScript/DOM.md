@@ -398,3 +398,18 @@ targetNode.textContent = targetNode.dataset.transration;　　//dataset.transrat
 }
 ```
 `li.textContent = selectedColors.join(',');`は`li.textContent = selectedColors;`でも可能
+
+
+## いろいろなイベント
+click以外の様々なイベント
+```JS:main.js
+{ 
+  document.querySelector('button').addEventListener('dblclick', () => { //ダブルクリックすると行う
+    console.log('Double Click!'); 
+  });
+  
+  document.addEventListener('mousemove', () => {　　//マウスを動かすと行う
+    console.log('moved!'); 
+  });
+}
+```
