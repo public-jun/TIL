@@ -280,3 +280,19 @@ targetNode.textContent = targetNode.dataset.transration;　　//dataset.transrat
 }
 ```
 `親Node.removeChild(削除するNode);`で表す
+
+
+## input要素を操作
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const li = document.createElement('li');             //li要素を作る
+    const text = document.querySelector('input'); 　　　　//input要素を取得する
+    li.textContent = text.value; 　　　　　　　　　　　　　　//liの中身をinputされたものにする 
+    document.querySelector('ul').appendChild(li);        //ulにliを追加する
+                                                        //入力されたものがli要素として出力される
+    text.value = ''; 　　　　　　　　　　　　　　　　　　　　　//inputを空白にして、　
+    text.focus(); 　　　　　　　　　　　　　　　　　　　　　　　//新たにfocusする
+  });
+}
+```
