@@ -296,3 +296,66 @@ targetNode.textContent = targetNode.dataset.transration;　　//dataset.transrat
   });
 }
 ```
+
+
+## セレクトボックスの操作
+```HTML:index.html
+<body>
+  <select>
+    <option value="red">赤</option>
+    <option value="bule">青</option>
+    <option value="yellow">黄</option>
+  </select>
+  <button>Add</button>
+
+  <ul>
+  </ul>
+  
+  <script src="js/main.js"></script>
+</body>
+```
+```js:main.js
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const li = document.createElement('li');                  　　　　//li要素を作成する
+    const color = document.querySelector('select'); 　　　　　　　　　　//select要素を取得する
+    li.textContent = `${color.value} - ${color.selectedIndex}`;　　　//value属性とindexの表示
+    document.querySelector('ul').appendChild(li); 　　　　　　　　　　　//li要素をDOMツリーに追加
+  });
+}
+```
+
+## ラジオボタンを操作
+```HTML:index.html
+<body>
+  <input type="radio" name="color" value="red">赤
+  <input type="radio" name="color" value="blue">青
+  <input type="radio" name="color" value="yellow">黄
+  <button>Add</button>
+  
+  <ul>
+  </ul>
+  
+  <script src="js/main.js"></script>
+</body>
+```
+```js:main.js
+'use strict';
+
+{ 
+  document.querySelector('button').addEventListener('click', () => {
+    const colors = document.querySelectorAll('input');   //input要素を取得
+    let selectedColor;                                    //値を保持するための変数を宣言
+
+    colors.forEach(color => {                           //colorの要素それぞれに対して
+      if (color. checked === true) {　　　　　　　　　　　　//チェックされているか確かめる
+        selectedColor = color.value; 　　　　　　　　　　　//チェックされていたら、valueの値を変数に代入する
+      }
+    }); 
+
+    const li = document.createElement('li'); 　　　　　　//li要素を作成する
+    li.textContent = selectedColor;                    //selectedColorをliのテキストに代入する
+    document.querySelector('ul').appendChild(li); 　　　//親Nodeulに子Nodeliを追加する
+  });
+}
+```
