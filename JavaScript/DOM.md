@@ -429,3 +429,53 @@ click以外の様々なイベント
   });
 }
 ```
+
+
+## フォームで使われるイベント
+
+### focus
+```js:main.js
+{ 
+  const text = document.querySelector('textarea');
+
+  text.addEventListener('focus', () => {  //focusしたときの処理
+    console.log('focus'); 
+  });
+}
+```
+
+### blur
+フォーカスが外れたら、必ず実行される
+```js:main.js
+{
+  const text = document.querySelector('textarea');
+
+  text.addEventListener('blur', () => {  //focusを外した時の処理
+    console.log('blur'); 
+  });
+}
+```
+
+### input 
+内容が更新された時
+```js:main.js
+{ 
+  const text = document.querySelector('textarea');
+
+  text.addEventListener('input', () => {   //内容が更新された時の処理
+    console.log('input'); 
+  });
+}
+```
+
+### change 
+内容の変更が確定した時
+```js:main.js
+{ 
+  const text = document.querySelector('textarea');
+
+  text.addEventListener('change', () => {  //内容の変更が確定した時の処理
+    console.log('change'); 
+  });
+}
+```
