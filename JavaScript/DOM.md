@@ -479,3 +479,28 @@ click以外の様々なイベント
   });
 }
 ```
+
+
+## フォームを送信
+```HTML:index.html
+<form>
+    <input type="text">
+    <button>Post</button>
+</form>
+```
+フォームタグの中にボタンを配置しておくと、クリックすると`submit`というイベントが起こる
+
+```js:main.js
+{ 
+  const form = document.querySelector('form'); 
+
+  form.addEventListener('submit', e => {
+    e.preventDefault(); 
+    console.log('subit'); 
+  });
+}
+```
+フォームを送信すると、ページの遷移が発生するのでsubmitは一瞬しか起こらない。
+`e.preventDefault()`でページ遷移をキャンセルすることができる
+また、 __フォームタグを使うとエンターキーでフォームを送信する__ ことができる。
+formタグの中に`<input type='text'>`がひとつだけの場合はbuttonタグを省略してもエンターキーで送信できる
