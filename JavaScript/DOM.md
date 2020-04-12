@@ -507,4 +507,34 @@ formタグの中に`<input type='text'>`がひとつだけの場合はbuttonタ�
 
 
 ## イベントの伝播
-Nodeツリーで
+Nodeツリーで子要素で起こったイベントが、親要素をどんどんたどって伝播して
+```HTML:index.html
+<style>
+    li {
+      cursor: pointer;
+    }
+    li.done {
+      text-decoration: line-through; 
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>Todo</li>
+    <li>Todo</li>nt
+    <li>Todo</li>
+  </ul>
+
+  <script src="js/main.js"></script>
+</body>
+```
+```JS:main.js
+{ 
+  document.querySelector('ul').addEventListener('click', e => {  //子要素liをクリックしても処理される
+    if (e.target.nodeName === 'LI') {　　　//
+      e.target.classList.toggle('done'); 
+    }
+  });
+}
+```
+Eventオブジェクトを使えばクリックした要素は`e.target`、 EventListenerを追加した要素は`e.currentTarget`で取得できる
